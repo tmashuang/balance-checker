@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/balance-checker/static/css/main.34de6062.chunk.css",
-    "main.js": "/balance-checker/static/js/main.98425163.chunk.js",
-    "main.js.map": "/balance-checker/static/js/main.98425163.chunk.js.map",
+    "main.js": "/balance-checker/static/js/main.b519c6f7.chunk.js",
+    "main.js.map": "/balance-checker/static/js/main.b519c6f7.chunk.js.map",
     "runtime~main.js": "/balance-checker/static/js/runtime~main.c61464ab.js",
     "runtime~main.js.map": "/balance-checker/static/js/runtime~main.c61464ab.js.map",
     "static/js/2.465ef0eb.chunk.js": "/balance-checker/static/js/2.465ef0eb.chunk.js",
     "static/js/2.465ef0eb.chunk.js.map": "/balance-checker/static/js/2.465ef0eb.chunk.js.map",
     "index.html": "/balance-checker/index.html",
-    "precache-manifest.2710139311ad1453d5e077c99e8867a1.js": "/balance-checker/precache-manifest.2710139311ad1453d5e077c99e8867a1.js",
+    "precache-manifest.d7692c0233cf61c7b9ad1ae54094eb0a.js": "/balance-checker/precache-manifest.d7692c0233cf61c7b9ad1ae54094eb0a.js",
     "service-worker.js": "/balance-checker/service-worker.js",
     "static/css/main.34de6062.chunk.css.map": "/balance-checker/static/css/main.34de6062.chunk.css.map"
   }
