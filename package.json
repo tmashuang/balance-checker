@@ -2,7 +2,7 @@
   "name": "balance-checker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tmashuang.github.io/balance-checker-dapp",
+  "homepage": "https://tmashuang.github.io/balance-checker",
   "dependencies": {
     "eth-query": "^2.1.2",
     "ethereumjs-util": "^6.1.0",
