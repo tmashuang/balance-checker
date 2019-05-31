@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/balance-checker-dapp/static/css/main.34de6062.chunk.css",
+    "main.js": "/balance-checker-dapp/static/js/main.0b4c9600.chunk.js",
+    "main.js.map": "/balance-checker-dapp/static/js/main.0b4c9600.chunk.js.map",
+    "runtime~main.js": "/balance-checker-dapp/static/js/runtime~main.0102c8bc.js",
+    "runtime~main.js.map": "/balance-checker-dapp/static/js/runtime~main.0102c8bc.js.map",
+    "static/js/2.608ccfba.chunk.js": "/balance-checker-dapp/static/js/2.608ccfba.chunk.js",
+    "static/js/2.608ccfba.chunk.js.map": "/balance-checker-dapp/static/js/2.608ccfba.chunk.js.map",
+    "index.html": "/balance-checker-dapp/index.html",
+    "precache-manifest.46b432edf4621d1f3d6ea3b4f99c0797.js": "/balance-checker-dapp/precache-manifest.46b432edf4621d1f3d6ea3b4f99c0797.js",
+    "service-worker.js": "/balance-checker-dapp/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/balance-checker-dapp/static/css/main.34de6062.chunk.css.map"
+  }
+}
