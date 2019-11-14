@@ -4,6 +4,7 @@ import EthJs from 'ethjs'
 import EthQuery from 'eth-query'
 import SINGLE_CALL_BALANCES_ABI from 'single-call-balance-checker-abi'
 import pify from 'pify'
+import log from 'loglevel'
 
 const ethUtil = require('ethereumjs-util')
 const SINGLE_CALL_BALANCES_ADDRESS = '0xb1f8e55c7f64d203c1400b9d8555d050f94adf39'
@@ -17,7 +18,7 @@ class App extends Component {
       ethQueryBalance: '',
       web3Balance: '',
       ethjsBalance: '',
-      error: ''
+      error: {}
     }
 
     this.loadEthQueryBalance = this.loadEthQueryBalance.bind(this)
@@ -31,15 +32,28 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    this.loadEthQueryBalance()
-    this.loadWeb3Balance()
-    this.loadEthJsBalance()
+    if (this.state.error === '' && this.state.ethQueryBalance === '') {
+      this.loadEthQueryBalance()
+    }
+
+    if (this.state.error  === '' && this.state.web3Balance === '') {
+      this.loadWeb3Balance()
+    }
+
+    if (this.state.error  === '' && this.state.ethjsBalance === '') {
+      this.loadEthJsBalance()
+    }
   }
 
   async loadWeb3() {
     this.web3 = new Web3(window.ethereum || "http://localhost:8545")
-    const accounts = await window.ethereum.enable()
-    this.setState({ account: accounts[0] })
+
+    try {
+      const accounts = await window.ethereum.enable()
+      this.setState({ account: accounts[0] })
+    } catch (error) {
+      this.setState({ error: error })
+    }
   }
 
   loadEthJs() {
@@ -59,9 +73,11 @@ class App extends Component {
 
     ethContract.balances(addressArray, ethBalance, (error, result) => {
       if (error) {
-        console.log(new Error(error))
+        log.error(error)
+      } else {
+        this.setState({ web3Balance: bnToHex(result[0]) })
       }
-      this.setState({ web3Balance: bnToHex(result) })
+
     })
   }
 
@@ -72,14 +88,13 @@ class App extends Component {
 
     ethContract.balances(addressArray, ethBalance, (error, result) => {
       if (error) {
-        console.log(error)
+        log.error(error)
         this.setState({ error: error })
       } else {
-        this.setState({ ethjsBalance: bnToHex(result) })
+        this.setState({ ethjsBalance: bnToHex(result[0]) })
       }
     })
   }
-
 
   render() {
     return (
